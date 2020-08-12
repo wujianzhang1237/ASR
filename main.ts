@@ -20,14 +20,17 @@ namespace Asr {
     const DELAY  = 100;//I2C之间延时间隔ms
 
     export enum Mode {
-
+        //% blockId="cycle_mode" block="cycle_mode"
         cycle_mode = 0,
+        //% blockId="password_mode" block="password_mode"  
         password_mode = 1,
+         //% blockId="key_mode" block="key_mode"        
         key_mode = 2
     }
     export enum Voice_State {
-
+        //% blockId="OFF" block="OFF"
         OFF = 0,
+        //% blockId="ON" block="ON""
         ON = 1,
     }
 
