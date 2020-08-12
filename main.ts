@@ -18,6 +18,16 @@ namespace Asr {
     const ASR_RESULT = 0x08                 //识别结果存放地址
     
     const DELAY  = 100;//I2C之间延时间隔ms
+
+    export enum Mode {
+
+        cycle_mode = 0,
+        password_mode,
+        key_mode
+    }
+
+
+
     //% blockId=Asr_Asr_Add_Words block="Asr_Add_Words|value %value|str %str"
     //% weight=96
     //% blockGap=10
@@ -73,7 +83,7 @@ namespace Asr {
     //% weight=99
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12  
-    export function Asr_Set_Mode(mode_num: number): void {
+    export function Asr_Set_Mode(mode_num: Mode): void {
         let buf = pins.createBuffer(2);
         buf[0] = ASR_MODE_ADDR;
         buf[1] = mode_num;
