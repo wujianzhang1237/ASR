@@ -199,7 +199,7 @@ namespace Asr {
     //% weight=93
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12 
-    export function Asr_Key_ON(voice: number): void {
+    export function Asr_Key_ON(): void {
         let buf = pins.createBuffer(2);
         buf[0] = ASR_KEY_FLAG;
         buf[1] = 1;
