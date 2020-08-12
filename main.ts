@@ -22,8 +22,46 @@ namespace Asr {
     export enum Mode {
 
         cycle_mode = 0,
-        password_mode,
-        key_mode
+        password_mode = 1,
+        key_mode = 2
+    }
+    export enum Voice_State {
+
+        OFF = 0,
+        ON = 1,
+    }
+
+    export enum enColor {
+
+        //% blockId="OFF" block="OFF"
+        OFF = 0,
+        //% blockId="Red" block="Red"
+        Red,
+        //% blockId="Green" block="Green"
+        Green,
+        //% blockId="Blue" block="Blue"
+        Blue,
+        //% blockId="White" block="White"
+        White,
+        //% blockId="Cyan" block="Cyan"
+        Cyan,
+        //% blockId="Pinkish" block="Pinkish"
+        Pinkish,
+        //% blockId="Yellow" block="Yellow"
+        Yellow,
+
+    }
+
+    function setPwmRGB(red: number, green: number, blue: number): void {
+
+        let buf = pins.createBuffer(4);
+        buf[0] = ASR_RGB_ADDR;
+        buf[1] = red;
+        buf[2] = green;
+        buf[3] = blue;
+        
+        pins.i2cWriteBuffer(I2C_ADDR, buf);
+        basic.pause(DELAY);
     }
 
 
@@ -63,19 +101,54 @@ namespace Asr {
         basic.pause(12000);//必须足够的延时用于擦除
     }
 
-    //% blockId=Asr_Asr_Set_RGB block="Asr_Set_RGB|red %red|green %green|blue %blue"
+    //% blockId=Asr_Asr_Set_RGB block="Asr_Set_RGB|value1 %value1|value2 %value2|value3 %value3"
     //% weight=98
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12  
-    export function Asr_Set_RGB(red: number, green: number, blue: number): void {
-        let buf = pins.createBuffer(4);
-        buf[0] = ASR_RGB_ADDR;
-        buf[1] = red;
-        buf[2] = green;
-        buf[3] = blue;
-        
-        pins.i2cWriteBuffer(I2C_ADDR, buf);
-        basic.pause(DELAY);
+    export function Asr_Set_RGB(value1: number, value2: number, value3: number): void {
+        setPwmRGB(value1, value2, value3);
+    }
+
+    //% blockId=Asr_Asr_Set_RGB2 block="Asr_Set_RGB2|value %value"
+    //% weight=98
+    //% blockGap=10
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    export function Asr_Set_RGB2(value: enColor): void {
+
+        switch (value) {
+            case enColor.OFF: {
+                setPwmRGB(0, 0, 0);
+                break;
+            }
+            case enColor.Red: {
+                setPwmRGB(255, 0, 0);
+                break;
+            }
+            case enColor.Green: {
+                setPwmRGB(0, 255, 0);
+                break;
+            }
+            case enColor.Blue: {
+                setPwmRGB(0, 0, 255);
+                break;
+            }
+            case enColor.White: {
+                setPwmRGB(255, 255, 255);
+                break;
+            }
+            case enColor.Cyan: {
+                setPwmRGB(0, 255, 255);
+                break;
+            }
+            case enColor.Pinkish: {
+                setPwmRGB(255, 0, 255);
+                break;
+            }
+            case enColor.Yellow: {
+                setPwmRGB(255, 255, 0);
+                break;
+            }
+        }
     }
 
 
@@ -109,7 +182,7 @@ namespace Asr {
     //% weight=94
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12 
-    export function Asr_Voice(voice: number): void {
+    export function Asr_Voice(voice: Voice_State): void {
         let buf = pins.createBuffer(2);
         buf[0] = ASR_VOICE_FLAG;
         buf[1] = voice;

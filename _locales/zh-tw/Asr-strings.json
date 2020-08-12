@@ -7,5 +7,20 @@
   "Asr.Asr_Voice|block": "識別提示聲音開關設置|數值 %voice",
   "Asr.Asr_Key_ON|block": "按鍵按下",
   "Asr.Asr_Result|block": "識別結果"
+  
+  "Asr.Mode.cycle_mode|block": "循環模式",
+  "Asr.Mode.password_mode|block": "口令模式",
+  "Asr.Mode.key_mode|block": "按鍵模式",
+  "Asr.Voice_State.OFF|block": "關",
+  "Asr.Voice_State.ON|block": "開",
+  
+  "Asr.enColor.OFF|block": "滅",
+  "Asr.enColor.Red|block": "紅色",
+  "Asr.enColor.Green|block": "綠色",
+  "Asr.enColor.Blue|block": "藍色",
+  "Asr.enColor.White|block": "白色",
+  "Asr.enColor.Cyan|block": "青色",
+  "Asr.enColor.Pinkish|block": "品紅",
+  "Asr.enColor.Yellow|block": "黃色"
 }
 
