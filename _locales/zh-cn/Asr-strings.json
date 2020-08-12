@@ -1,0 +1,9 @@
+{
+  "Asr.Asr_Add_Words|block": "添加识别词组|词组序号 %value|词组拼音 %str",
+  "Asr.Asr_Set_RGB|block": "模块RGB灯|红色 %red|绿色 %green|蓝色 %blue",
+  "Asr.Asr_Set_Mode|block": "设置模式为|模式 %mode_num",
+  "Asr.Asr_Gain|block": "设置灵敏度为|数值 %gain",
+  "Asr.Asr_Voice|block": "识别提示声开关设置|数值 %voice",
+  "Asr.Asr_Key_ON|block": "按键按下",
+  "Asr.Asr_Result|block": "识别结果"
+}
