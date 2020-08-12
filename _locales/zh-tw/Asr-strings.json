@@ -1,9 +1,11 @@
 {
-  "Asr.Asr_Add_Words|block": "添加识别词组|词组序号 %value|词组拼音 %str",
-  "Asr.Asr_Set_RGB|block": "模块RGB灯|红色 %red|绿色 %green|蓝色 %blue",
-  "Asr.Asr_Set_Mode|block": "设置模式为|模式 %mode_num",
-  "Asr.Asr_Gain|block": "设置灵敏度为|数值 %gain",
-  "Asr.Asr_Voice|block": "识别提示声开关设置|数值 %voice",
-  "Asr.Asr_Key_ON|block": "按键按下",
-  "Asr.Asr_Result|block": "识别结果"
+  "Asr.Asr_Add_Words|block": "添加識別詞組|詞組序號 %value|詞組拼音 %str",
+  "Asr.Asr_Clear_Buffer|block": "清除掉電緩存區",
+  "Asr.Asr_Set_RGB|block": "模塊RGB燈|紅色 %red|綠色 %green|藍色 %blue",
+  "Asr.Asr_Set_Mode|block": "設置模式為|模式 %mode_num",
+  "Asr.Asr_Gain|block": "設置靈敏度為|數值 %gain",
+  "Asr.Asr_Voice|block": "識別提示聲音開關設置|數值 %voice",
+  "Asr.Asr_Key_ON|block": "按鍵按下",
+  "Asr.Asr_Result|block": "識別結果"
 }
+

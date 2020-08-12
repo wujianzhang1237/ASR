@@ -1,5 +1,6 @@
 {
   "Asr.Asr_Add_Words|block": "添加识别词组|词组序号 %value|词组拼音 %str",
+  "Asr.Asr_Clear_Buffer|block": "清除掉电缓存区",
   "Asr.Asr_Set_RGB|block": "模块RGB灯|红色 %red|绿色 %green|蓝色 %blue",
   "Asr.Asr_Set_Mode|block": "设置模式为|模式 %mode_num",
   "Asr.Asr_Gain|block": "设置灵敏度为|数值 %gain",
