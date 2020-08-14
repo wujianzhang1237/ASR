@@ -17,7 +17,7 @@ namespace Asr {
     const ASR_VOICE_FLAG = 0x07             //用于设置是否开启识别结果提示音
     const ASR_RESULT = 0x08                 //识别结果存放地址
     
-    const DELAY  = 100;//I2C之间延时间隔ms
+    const DELAY  = 150;//I2C之间延时间隔ms
 
     export enum Mode {
         //% blockId="cycle_mode" block="cycle_mode"
@@ -217,13 +217,12 @@ namespace Asr {
     export function Asr_Result(): number {
 
         let buf = pins.createBuffer(1);
-        let result = pins.createBuffer(1);
         buf[0] = ASR_RESULT;       
         pins.i2cWriteBuffer(I2C_ADDR, buf);
         basic.pause(DELAY);  
 
-        result = pins.i2cReadBuffer(I2C_ADDR, 1, false);
-        return result[0] & 0xff;
+        let result = pins.i2cReadNumber(I2C_ADDR,NumberFormat.UInt8LE, false);
+        return result;
     } 
  
 }
