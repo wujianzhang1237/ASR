@@ -217,12 +217,13 @@ namespace Asr {
     export function Asr_Result(): number {
 
         let buf = pins.createBuffer(1);
+        let result = pins.createBuffer(1);
         buf[0] = ASR_RESULT;       
         pins.i2cWriteBuffer(I2C_ADDR, buf);
         basic.pause(DELAY);  
 
-        let result = pins.i2cReadBuffer(I2C_ADDR, 1, false);
-        return result[0];
+        result = pins.i2cReadBuffer(I2C_ADDR, 1, false);
+        return result[0] & 0xff;
     } 
  
 }
