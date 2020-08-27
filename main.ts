@@ -7,7 +7,7 @@ load dependency
 
 //% color="#006400" weight=20 icon="\uf170"
 namespace Asr {
-    const I2C_ADDR = 0x0d                   //语音识别模块地址
+    const I2C_ADDR = 0x0f                   //语音识别模块地址
     const ASR_ADD_WORD_ADDR = 0x01          //词条添加地址
     const ASR_MODE_ADDR = 0x02              //识别模式设置地址，值为0-2，0:循环识别模式 1:口令模式 ,2:按键模式，默认为循环检测
     const ASR_RGB_ADDR = 0x03               //RGB灯设置地址,需要发两位，第一个直接为灯号1：蓝 2:红 3：绿 ,第二个字节为亮度0-255，数值越大亮度越高
@@ -31,7 +31,7 @@ namespace Asr {
         //% blockId="OFF" block="OFF"
         OFF = 0,
         //% blockId="ON" block="ON""
-        ON = 1,
+        ON = 1
     }
 
     export enum enColor {
@@ -51,7 +51,7 @@ namespace Asr {
         //% blockId="Pinkish" block="Pinkish"
         Pinkish,
         //% blockId="Yellow" block="Yellow"
-        Yellow,
+        Yellow
 
     }
 
