@@ -5,7 +5,7 @@ load dependency
 "Asr": "file:../pxt-Asr"
 */
 
-//% color="#006400" weight=20 icon="\uf170"
+//% color="#006400" weight=20 icon="\uf3c9"
 namespace Asr {
     const I2C_ADDR = 0x0f                   //语音识别模块地址
     const ASR_ADD_WORD_ADDR = 0x01          //词条添加地址
