@@ -1,0 +1,31 @@
+{
+  "Asr.Asr_Add_Words|block": "Add identifying phrase|the phrase sequence number %value|the phrase pinyin %str",
+  "Asr.Asr_Clear_Buffer|block": "Clear the dead cache area",
+  "Asr.Asr_Set_RGB|block": "Module RBG lamp|Red %value1|Green %value2|Blue %value3",
+  "Asr.Asr_Set_RGB2|block": "Module RBG lamp|Select the RGB lamp color %value",  
+  "Asr.Asr_Set_Mode|block": "Set the mode|to %mode_num",
+  "Asr.Asr_Gain|block": "Set the sensitivity |to(0-85) %gain",
+  "Asr.Asr_Voice|block": "Set the recognition promp|as %voice",
+  "Asr.Asr_Buzzer|block": "The buzzer is set|to %buzzer_state",    
+  "Asr.Asr_Key_ON|block": "The button is pressed",
+  "Asr.Asr_Result|block": "Identify Results",
+  "Asr.Asr_NUM_Cleck|block": "Module input phrase number",  
+  "Asr.Cleck_Asr_Num|block": "Check module input phrase number|the phrase for %asr_num",  
+  
+  "Asr.Mode.cycle_mode|block": "circulation mode",
+  "Asr.Mode.password_mode|block": "Password mode",
+  "Asr.Mode.key_mode|block": "The key mode",
+  "Asr.Voice_State.OFF|block": "OFF",
+  "Asr.Voice_State.ON|block": "ON",
+  "Asr.Buzzer_State.OFF|block": "OFF",
+  "Asr.Buzzer_State.ON|block": "ON",  
+  
+  "Asr.enColor.OFF|block": "OFF",
+  "Asr.enColor.Red|block": "Red",
+  "Asr.enColor.Green|block": "Green",
+  "Asr.enColor.Blue|block": "Blue",
+  "Asr.enColor.White|block": "White",
+  "Asr.enColor.Cyan|block": "Cyan",
+  "Asr.enColor.Pinkish|block": "Pinkish",
+  "Asr.enColor.Yellow|block": "Yellow"
+}

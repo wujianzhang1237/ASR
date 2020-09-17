@@ -4,7 +4,7 @@
   "Asr.Asr_Set_RGB|block": "模块RGB灯|红色 %value1|绿色 %value2|蓝色 %value3",
   "Asr.Asr_Set_RGB2|block": "模块RGB灯|选择RGB灯颜色 %value",  
   "Asr.Asr_Set_Mode|block": "设置模式为|模式 %mode_num",
-  "Asr.Asr_Gain|block": "设置灵敏度为|数值 %gain",
+  "Asr.Asr_Gain|block": "设置灵敏度为|数值(0-85) %gain",
   "Asr.Asr_Voice|block": "识别提示声开关设置|数值 %voice",
   "Asr.Asr_Buzzer|block": "蜂鸣器设置|为 %buzzer_state",    
   "Asr.Asr_Key_ON|block": "按键按下",
