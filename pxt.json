@@ -12,7 +12,6 @@
     "files": [
         "README.md",
         "main.ts",
-		"_locales/zh-en/Asr-strings.json",
         "_locales/zh-cn/Asr-strings.json",
         "_locales/zh-tw/Asr-strings.json"
     ],

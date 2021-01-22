@@ -1,5 +1,5 @@
 ﻿/*
-Copyright (C): 2010-2019, Shenzhen Yahboom Tech
+Copyright (C): 2010-2022, Shenzhen Yahboom Tech
 modified from wujianzhang
 load dependency
 "Asr": "file:../pxt-Asr"
@@ -88,13 +88,15 @@ namespace Asr {
         let asr_txt = str;
         let num = asr_txt.length + 2;
 
-        let buf = pins.createBuffer(num);
+        let buf = pins.createBuffer(num + 2);//新塘语音识别没有停止位对应的中断，所以用254当结束标志，但是之前用个0来代表串口的中断符号
         buf[0] = ASR_ADD_WORD_ADDR;
         buf[1] = value;
         for(let i =2;i<num;i++)
         {
             buf[i] = asr_txt.charCodeAt(i-2);
         }
+        buf[num] = 0;
+        buf[num + 1] = 254;
 
         pins.i2cWriteBuffer(I2C_ADDR, buf);
         basic.pause(DELAY);
