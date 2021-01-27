@@ -18,7 +18,6 @@ namespace Asr {
     const ASR_RESULT = 0x08                 //识别结果存放地址
     const ASR_BUZZER = 0x09                 //蜂鸣器控制寄存器，写1开启，写0关闭
     const ASR_NUM_CLECK =0x0a               //录入词条数目校验
-    const ASR_NUM_CLECK =0x0a               //录入词条数目校验
     const FIRMWARE_VERSION = 0x0b           //固件版本号
     
     const DELAY  = 150;//I2C之间延时间隔ms
