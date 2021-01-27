@@ -18,7 +18,8 @@ namespace Asr {
     const ASR_RESULT = 0x08                 //识别结果存放地址
     const ASR_BUZZER = 0x09                 //蜂鸣器控制寄存器，写1开启，写0关闭
     const ASR_NUM_CLECK =0x0a               //录入词条数目校验
-
+    const ASR_NUM_CLECK =0x0a               //录入词条数目校验
+    const FIRMWARE_VERSION = 0x0b           //固件版本号
     
     const DELAY  = 150;//I2C之间延时间隔ms
 
@@ -282,6 +283,22 @@ namespace Asr {
         }
 
 }
+
+    //% blockId=Read_Firmware_Version block="Read_Firmware_Version"
+    //% weight=90
+    //% blockGap=10
+    //% color="#006400"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    export function Read_Firmware_Version(): number {
+
+        let buf = pins.createBuffer(1);
+        buf[0] = FIRMWARE_VERSION;       
+        pins.i2cWriteBuffer(I2C_ADDR, buf);
+        basic.pause(DELAY);  
+
+        let result = pins.i2cReadNumber(I2C_ADDR,NumberFormat.UInt8LE, false);
+        return result;
+    }
 
  
 }

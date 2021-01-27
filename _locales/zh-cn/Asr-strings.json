@@ -10,7 +10,8 @@
   "Asr.Asr_Key_ON|block": "按键按下",
   "Asr.Asr_Result|block": "识别结果",
   "Asr.Asr_NUM_Cleck|block": "模块录入词组数",  
-  "Asr.Cleck_Asr_Num|block": "检验模块录入词组数|词组数为 %asr_num",  
+  "Asr.Cleck_Asr_Num|block": "检验模块录入词组数|词组数为 %asr_num",
+  "Asr.Read_Firmware_Version|block": "读取固件版本",
   
   "Asr.Mode.cycle_mode|block": "循环模式",
   "Asr.Mode.password_mode|block": "口令模式",

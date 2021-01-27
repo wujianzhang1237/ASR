@@ -11,6 +11,7 @@
   "Asr.Asr_Result|block": "識別結果",
   "Asr.Asr_NUM_Cleck|block": "模塊錄入詞組數",  
   "Asr.Cleck_Asr_Num|block": "檢驗模塊錄入詞組數|詞組數為 %asr_num",  
+  "Asr.Read_Firmware_Version|block": "讀取固件版本",
   
   "Asr.Mode.cycle_mode|block": "循環模式",
   "Asr.Mode.password_mode|block": "口令模式",
